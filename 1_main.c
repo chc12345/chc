@@ -1,13 +1,33 @@
 //202510125125
-//chc0210@foxmail.com
+//chc0210@focmail.com
 //陈惠聪
 #include <stdio.h>
 int main()
 {
-    float a,b;
-    b = 30.0;
-    scanf("%f",&a);
-    b = a*9/5 + 32;
-    printf("%.1f",b);
-    return 0;
+    int a,b;
+    char op;
+    scanf("%d %d %c", &a, &b, &op);
+    switch(op){
+        case '+':
+        printf("%d",a + b);
+        break;
+        case '-':
+        printf("%d",a - b);
+        break;
+        case '*':
+        printf("%d",a * b);
+        break;
+        case '/':
+        if (b != 0){
+            printf("%d",a/b);
+        }else{
+            printf("除数不能为0");
+        }
+        break;
+        default:
+        printf("运算符无效");
+
+    }
+        return 0;
+    
 }
