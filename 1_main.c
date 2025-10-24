@@ -1,33 +1,26 @@
 //202510125125
-//chc0210@focmail.com
+//chc0210@foxmail.com
 //陈惠聪
 #include <stdio.h>
 int main()
 {
-    int a,b;
-    char op;
-    scanf("%d %d %c", &a, &b, &op);
-    switch(op){
-        case '+':
-        printf("%d",a + b);
-        break;
-        case '-':
-        printf("%d",a - b);
-        break;
-        case '*':
-        printf("%d",a * b);
-        break;
-        case '/':
-        if (b != 0){
-            printf("%d",a/b);
-        }else{
-            printf("除数不能为0");
-        }
-        break;
-        default:
-        printf("运算符无效");
-
+    int score;
+    printf("请输入一个成绩\n");
+    scanf("%d",&score);
+    if (score >=90 && score <=100){
+        printf("A");
     }
-        return 0;
-    
+    else if (score >=80 && score <=89){
+        printf("B");
+    }
+    else if (score >=70 && score <=79){
+        printf("C");
+    }
+    else if (score >=60 && score <=69){
+        printf("D");
+    }
+    else {
+        printf("E");
+    }
+    return 0;
 }
