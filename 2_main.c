@@ -2,6 +2,7 @@
 //chc0210@foxmailcom
 //陈惠聪
 #include <stdio.h>
+
 int main() 
 {
     int arr[3][3];
@@ -16,13 +17,13 @@ int main()
         }
     }
 
-    // 输出（带空格）
-    for (i = 0; i < 3; i++) 
+    // 输出转置矩阵
+    for (j = 0; j < 3; j++) 
     {
-        for (j = 0; j < 3; j++) 
+        for (i = 0; i < 3; i++) 
         {
             printf("%d", arr[i][j]);
-            if (j < 2) printf(" ");  // 除最后一个数字外，其他加空格
+            if (i < 2) printf(" ");  // 除最后一个数字外，其他加空格
         }
         printf("\n");
     }
