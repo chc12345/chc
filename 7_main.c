@@ -2,7 +2,7 @@
 //chc0210@foxmailcom
 //陈惠聪
 #include <stdio.h>
-// 反转数组元素
+// 反转数组元素位置
 void reverseArray(int arr[], int length) 
 {
     int i, j, temp;
@@ -16,14 +16,18 @@ void reverseArray(int arr[], int length)
 
 int main() 
 {
-    int arr[5] = {1, 2, 3, 4, 5};  // 固定输入为 1 2 3 4 5
+    int arr[5];
+    for (int i = 0; i < 5; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
 
     reverseArray(arr, 5);
 
     for (int i = 0; i < 5; i++) 
     {
         printf("%d", arr[i]);
-        if (i < 4) printf(" ");  // 除最后一个元素外，其他加空格
+        if (i < 4) printf(" ");
     }
     printf("\n");
 
